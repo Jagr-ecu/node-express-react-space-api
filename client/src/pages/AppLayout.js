@@ -77,20 +77,20 @@ const AppLayout = props => {
                 submitLaunch={submitLaunch}
                 isPendingLaunch={isPendingLaunch} />
             </Route>
-            <Route exact path="/launch">
+            <Route exact path="/lanzamiento">
               <Launch
                 entered={anim.entered}
                 planets={planets}
                 submitLaunch={submitLaunch}
                 isPendingLaunch={isPendingLaunch} />
             </Route>
-            <Route exact path="/upcoming">
+            <Route exact path="/proximo">
               <Upcoming
                 entered={anim.entered}
                 launches={launches}
                 abortLaunch={abortLaunch} />
             </Route>
-            <Route exact path="/history">
+            <Route exact path="/historial">
               <History entered={anim.entered} launches={launches} />
             </Route>
           </Switch>

@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')))//localiza los arch
 
 app.use(planetsRouter)
 app.use(launchesRouter)
-app.get('/', (req, res) => {//el la pagina / muestra la pagina de react desde index.html
+app.get('/*', (req, res) => {//el la pagina / muestra la pagina de react desde index.html
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
 })
 
