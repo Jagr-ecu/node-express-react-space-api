@@ -13,20 +13,20 @@ describe("Test GET /launches", () => {
 describe("Test POST /launch", () => {
     const completeLaunchData = {
         mission: 'Some mission',
-        rockert: 'some rocket',
+        rocket: 'some rocket',
         target: 'some target',
         launchDate: 'January 4, 2028'
     }
 
     const launchDataWithoutDate = {
         mission: 'Some mission',
-        rockert: 'some rocket',
+        rocket: 'some rocket',
         target: 'some target',
     }
 
     const launchDataWithInvalidDate = {
         mission: 'Some mission',
-        rockert: 'some rocket',
+        rocket: 'some rocket',
         target: 'some target',
         launchDate: 'bad'
     }
