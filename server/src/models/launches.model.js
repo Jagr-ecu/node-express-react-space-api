@@ -1,4 +1,4 @@
-const launches = new Map()
+const launches =require('./launches.schema')
 
 let latestFlightNumber = 100
 
@@ -13,7 +13,7 @@ const launch = {
     success: true
 }
 
-launches.set(launch.flightNumber, launch)
+//launches.set(launch.flightNumber, launch)
 
 function getAllLaunches(){
     return Array.from(launches.values())
