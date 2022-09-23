@@ -22,4 +22,4 @@ app.get('/*', (req, res) => {//el la pagina / muestra la pagina de react desde i
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
 })
 
-module.exports = app
+module.exports = app//se exporta app para usarlo en test
