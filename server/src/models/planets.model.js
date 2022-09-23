@@ -58,7 +58,7 @@ async function savePlanet(planet){
         }, {
             keplerName: planet.kepler_name//update
         }, {
-            upsert: true//solo sera agregado si no existe
+            upsert: true//solo sera agregado si no existe sino lo actualiza
         })
     } catch(err) {
         console.log(`No se pudo guardar los planetas: ${err}`)

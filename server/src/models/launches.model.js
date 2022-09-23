@@ -34,9 +34,9 @@ async function getLatestFlightNumber(){
 
 async function getAllLaunches() {
   return await launches.find(
-    {},
+    {},//no filtros
     {
-      "_id": 0,
+      "_id": 0,//no envia estas variables que estan en mongodb por defecto
       __v: 0,
     }
   );
