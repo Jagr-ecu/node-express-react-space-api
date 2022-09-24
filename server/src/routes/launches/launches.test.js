@@ -14,7 +14,7 @@ describe('Launches API', () => {
     describe("Test GET /launches", () => {
         test('Deberia responder con codigo 200 success', async() => {
             const response = await request(app)
-                .get('/launches')
+                .get('/v1/launches')
                 .expect('Content-Type', /json/)//regular expression
                 .expect(200)
         })
@@ -43,7 +43,7 @@ describe('Launches API', () => {
     
         test('Deberia responder con codigo 201 created', async() => {
             const response = await request(app)
-                .post('/launches')
+                .post('/v1/launches')
                 .send(completeLaunchData)
                 .expect('Content-Type', /json/)
                 .expect(201)
@@ -57,7 +57,7 @@ describe('Launches API', () => {
     
         test('Deberia verificar propiedades faltantes', async() => {
             const response = await request(app)
-                .post('/launches')
+                .post('/v1/launches')
                 .send(launchDataWithoutDate)
                 .expect('Content-Type', /json/)
                 .expect(400)
@@ -69,7 +69,7 @@ describe('Launches API', () => {
     
         test('Deberia verificar fechas invalidas', async() => {
             const response = await request(app)
-                .post('/launches')
+                .post('/v1/launches')
                 .send(launchDataWithInvalidDate)
                 .expect('Content-Type', /json/)
                 .expect(400)

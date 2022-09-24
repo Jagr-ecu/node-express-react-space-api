@@ -15,7 +15,7 @@ app.use(morgan('combined'))//logging
 app.use(express.json())
 app.use(express.static(path.join(__dirname, '..', 'public')))//localiza los archivos estaticos
 
-app.use('/v1', api)
+app.use('/v1', api);
 
 app.get('/*', (req, res) => {//el la pagina / muestra la pagina de react desde index.html
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
