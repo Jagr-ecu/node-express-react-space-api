@@ -1,10 +1,16 @@
 const request = require('supertest')
 const app = require('../../app');
+const { loadPlanetData } = require('../../models/planets.model');
 const { mongoConnect, mongoDisconnect } = require('../../services/mongo')
 
 describe('Launches API', () => {
     beforeAll(async () => {
-        await mongoConnect();  
+        //se conecta a mongo porque se conecta al servidor de mongo directamente
+        // a diferencia de server.js que crea por medio de https
+        await mongoConnect();
+        //se carga los planetas pára que en CI no de error porque no existen registros
+        //en bd
+        await loadPlanetData();
     })
 
     afterAll(async () => {
